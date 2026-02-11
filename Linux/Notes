@@ -1,0 +1,74 @@
+# What is the server?
+Server - serve information
+Client - Request information
+
+#Diff. b/w Web server & application server
+Web server - serves static data
+Application server - Serves dynamic data
+
+#Types of Applications
+Standalone applications - no requirement of internet database or anything or web browser
+web applications - web server which is accessed using a web browser
+
+#Application support - focuses on keeping an application running smoothly in a live (production) environment.
+
+#Application Maintaninance - focuses on improving, updating, and enhancing an application after it has been deployed.
+
+#Introduction To Linux:
+1. What is Linux?
+-> Open source operating system
+-> Introduced in 1991 by Linus Torvalds  
+-> Anyone can view the source code
+-> Anyone can modify and distribute it
+-> It is free to use (in most distributions)
+
+2. How to run Linux:
+(a) WSL    (b) Virtual Box    (c) VM on AWS, Azure, GCP    (d) Vagrant
+
+3. Diff. b/w Linux & Windows:
+(a) Windows:
+-> comes in a commercial license
+-> General purpose
+-> Have to purchase antivirus
+
+(b) Linux:
+-> General Public License
+-> mainly focuses on development, networking, terminal, programming, scripting
+-> no requirement of antivirus
+
+4. Software Remote location server tools:
+-> To connect to and manage a server from another location over a network (LAN or Internet)
+(a) RDP - For windows    (b) SSH - For Linux
+
+5. Kernel, Bootloader & Shell
+(a) Kernel:
+-> Heart of Linux - contains coding files, programs, processes to run Linux
+-> Name: Linux Kernel
+-> Kernel is mainly in C language so to understand it we use shell
+
+(b) Shell:
+-> interface between the user and the kernel.
+-> allows you to send commands to the operating system.
+-> What Shell Does
+(a) Takes user input    (b) Interprets commands    (c) Passes instructions to kernel    (d) Displays output
+
+(c) Bootloader:
+-> The process in which the files that are required for starting the OS runs
+-> GRUB (Grand Unified Bootloader) - program that loads the operating system kernel when the computer starts.
+
+6. Desktop Environment: graphical interface layer (windows, icons, menus, panels) that allows users to interact visually with a Linux system instead of using only the command line.
+
+7. System Architecture of Linux:
+User
+  ↓
+Applications
+  ↓
+Shell / GUI
+  ↓
+System Libraries
+  ↓
+Kernel
+  ↓
+Hardware
+
+8. Linux Commands to Get Hardware Information:
