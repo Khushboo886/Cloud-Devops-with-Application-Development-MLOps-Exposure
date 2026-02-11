@@ -72,3 +72,22 @@ Kernel
 Hardware
 
 8. Linux Commands to Get Hardware Information:
+(a) top: shows real-time system activity.
+(b) df -h: Shows how much disk space is used and how much is free (in GB/MB)
+(c) free -h: Shows how much RAM (memory) is used, free, and available in human-readable format (MB/GB).
+
+9. Linux File System
+-> Hierarchical structure that starts from a single root directory / and organizes all files and folders under it.
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── usr
+├── var
+└── tmp
+
+10. Diff. b/w Linux and Unix
+-> 
