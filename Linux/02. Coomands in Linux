@@ -1,0 +1,18 @@
+* What is a command?
+-> A command is an instruction we give to the terminal to perform any task.
+
+* Commands in Linux:
+1. date: To display the date
+2. ls: Lists files and folders in the current directory. 
+3. mkdir: To make a new directory.
+4. ls -l: shows files and directories in long (detailed) format.
+5. pwd: Prints the current directory path.
+6. touch: To create a new file.
+7. clear: to clear the terminal.
+8. cd: used to change the directory.
+9. cd ..: moves you one directory up (to the parent directory).
+-> Ex: If you are in /vagrant/ubuntu/devops then after using cd .., you will get in /vagrant/ubuntu
+10. rm: Delete files
+11. rmdir: To delete a directory.
+12. rm -r: deletes a directory and everything inside it (recursively).
+13. cat: displays the file content.
