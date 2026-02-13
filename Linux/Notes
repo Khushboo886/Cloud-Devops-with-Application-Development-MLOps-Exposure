@@ -90,4 +90,34 @@ Hardware
 └── tmp
 
 10. Diff. b/w Linux and Unix
--> 
+(a) Unix:
+-> Developed in 1969 at AT&T Bell Labs
+-> Key Contributors: Ken Thompson and Dennis Ritchie
+-> Owned by vendors
+-> Usually paid
+-> Used in legacy enterprise systems and specialized servers.
+-> Ex: AIX, HP-UX, Solaris
+
+(b) Linux:
+-> Created in 1991 by Linus Torvalds.
+-> Open-source and freely distributed.
+-> Built to behave like UNIX but not derived from original UNIX code.
+-> Most distributions are free
+-> Dominates Cloud platforms, Web servers, DevOps environments, Containers (Docker, Kubernetes), Major cloud providers rely heavily on Linux
+-> Ex: Ubuntu, Red Hat Enterprise linux, Desbian
+
+11. States of Processes in Linux:
+-> A process is a running program in Linux.
+-> During its lifetime, it moves through different states.
+* Main Process States:-
+(a) New: Process is being created. Not running yet.
+(b) Running (R):- Process is actively executing on CPU or ready & waiting for CPU
+-> Command:- ps aux
+(c) Sleeping (S/D):-
+-> S - INterruptible sleep:- wating for some event (line input / output). Can be interrupted.
+-> D - Uninterruptible Sleep:- Waiting for hardware (disk / network). Cannot be interrupted.
+-> Most processes are usually in sleeping state
+(d) Stopped (T):- Process paused manually. Example: Press Ctrl + Z.
+(e) Zombie (Z):- Process finished execution. Parent has not collected its exit status
+-> It appears as: Z
+Zombie processes don’t use CPU, but stay in process table.
