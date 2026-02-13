@@ -16,3 +16,21 @@
 11. rmdir: To delete a directory.
 12. rm -r: deletes a directory and everything inside it (recursively).
 13. cat: displays the file content.
+
+14. echo: Prints text or variables to the terminal.
+-> Used to print a message (echo "hello)", check variable value (echo $USER), write text into a file (echo "Hello World" > file.txt), append to a file (echo "New line" >> file.txt)
+-> ⚠️ Using > will overwrite the file completely.If the file already contains data, it will be erased.
+-> Safer option if you want to keep existing content: >>
+
+15. zcat: Displays the contents of a compressed .gz file without extracting it.
+-> Used to view a compressed log file (zcat file.log.gz), to check old system logs (zcat /var/log/syslog.1.gz), to search inside compressed file (zcat file.gz | grep error), very useful in servers where logs are stored in compressed format.
+-> ⚠️ No direct risk — it does not modify the file. However, if the file is very large, it may flood your terminal with too much output.
+
+16. head: shows the first 10 lines of a file (by default)
+-> Used to quickly preview a file (head file.txt), Show first 5 lines (head -n 5 file.txt), to check the start of a log file
+
+17. tail: Shows the last 10 lines of a file (by default).
+-> Used to check recent log entries (tail file.txt), Show last 20 lines (tail -n 20 file.txt), monitor live logs (tail -f file.txt).
+-> tail -f keeps running continuously until you stop it (Ctrl + C)
+
+18. less: Opens a file for scrollable viewing (page by page, both forward and backward).
