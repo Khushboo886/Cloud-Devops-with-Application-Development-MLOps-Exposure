@@ -34,3 +34,19 @@
 -> tail -f keeps running continuously until you stop it (Ctrl + C)
 
 18. less: Opens a file for scrollable viewing (page by page, both forward and backward).
+-> Used to view large file safely (less file.txt), used to view log file (less /var/log/messages)
+-> Inside less:
+↑ ↓ → move line by line
+Space → next page
+b → previous page
+/word → search
+q → quit
+-> Used heavily in DevOps for reading logs.
+
+19. more: Displays file content page by page, but only forward.
+-> Used for simple file viewing.
+Space → next page
+Enter → next line
+q → quit
+
+-> less is an advanced file viewer; more is a simpler, older version for basic page-by-page viewing.
