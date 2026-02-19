@@ -1,0 +1,52 @@
+* What is a command?
+-> A command is an instruction we give to the terminal to perform any task.
+
+* Commands in Linux:
+1. date: To display the date
+2. ls: Lists files and folders in the current directory. 
+3. mkdir: To make a new directory.
+4. ls -l: shows files and directories in long (detailed) format.
+5. pwd: Prints the current directory path.
+6. touch: To create a new file.
+7. clear: to clear the terminal.
+8. cd: used to change the directory.
+9. cd ..: moves you one directory up (to the parent directory).
+-> Ex: If you are in /vagrant/ubuntu/devops then after using cd .., you will get in /vagrant/ubuntu
+10. rm: Delete files
+11. rmdir: To delete a directory.
+12. rm -r: deletes a directory and everything inside it (recursively).
+13. cat: displays the file content.
+
+14. echo: Prints text or variables to the terminal.
+-> Used to print a message (echo "hello)", check variable value (echo $USER), write text into a file (echo "Hello World" > file.txt), append to a file (echo "New line" >> file.txt)
+-> ⚠️ Using > will overwrite the file completely.If the file already contains data, it will be erased.
+-> Safer option if you want to keep existing content: >>
+
+15. zcat: Displays the contents of a compressed .gz file without extracting it.
+-> Used to view a compressed log file (zcat file.log.gz), to check old system logs (zcat /var/log/syslog.1.gz), to search inside compressed file (zcat file.gz | grep error), very useful in servers where logs are stored in compressed format.
+-> ⚠️ No direct risk — it does not modify the file. However, if the file is very large, it may flood your terminal with too much output.
+
+16. head: shows the first 10 lines of a file (by default)
+-> Used to quickly preview a file (head file.txt), Show first 5 lines (head -n 5 file.txt), to check the start of a log file
+
+17. tail: Shows the last 10 lines of a file (by default).
+-> Used to check recent log entries (tail file.txt), Show last 20 lines (tail -n 20 file.txt), monitor live logs (tail -f file.txt).
+-> tail -f keeps running continuously until you stop it (Ctrl + C)
+
+18. less: Opens a file for scrollable viewing (page by page, both forward and backward).
+-> Used to view large file safely (less file.txt), used to view log file (less /var/log/messages)
+-> Inside less:
+↑ ↓ → move line by line
+Space → next page
+b → previous page
+/word → search
+q → quit
+-> Used heavily in DevOps for reading logs.
+
+19. more: Displays file content page by page, but only forward.
+-> Used for simple file viewing.
+Space → next page
+Enter → next line
+q → quit
+
+-> less is an advanced file viewer; more is a simpler, older version for basic page-by-page viewing.

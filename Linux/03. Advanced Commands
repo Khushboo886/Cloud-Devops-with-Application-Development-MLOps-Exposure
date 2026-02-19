@@ -1,0 +1,73 @@
+1. cp: Copies files or directories from one location to another.
+-> Real use case:
+Copy a file: cp file.txt backup.txt
+Copy file to another folder: cp file.txt /home/khushboo/
+Copy a folder (recursive): cp -r folder1 folder2
+-> Used for backups, deployments, duplicating configs.
+-> Risk (if any): ⚠️ If destination file exists, it may overwrite it.
+Safer option: cp -i file.txt backup.txt (-i asks before overwrite)
+
+2. mv: Moves or renames files and directories.
+-> Real use case
+Rename file: mv old.txt new.txt
+-> Move file to another folder: mv file.txt /home/khushboo/
+-> Used for organizing files or renaming configs.
+-> Risk (if any): ⚠️ If destination file exists, it will overwrite it without warning.
+Safer option: mv -i file.txt /home/khushboo/
+
+3. wc (word count): Counts lines, words, and characters in a file.
+-> Real use case:
+Count lines, words, characters: wc file.txt
+Count only lines: wc -l file.txt
+Count only words: wc -w file.txt
+Count characters: wc -c file.txt
+-> Used in Log analysis, Checking file size by line count, Script processing
+
+4. ln: Creates a link between files (a reference to another file).
+-> There are two types:
+Hard link
+Soft link (symbolic link)
+-> Real Use Case:
+Create Hard Link: ln file.txt file_link.txt
+Both files point to the same data.
+🔹 Create Soft Link (Most Common): ln -s file.txt shortcut.txt
+-> Used for:
+Creating shortcuts
+Linking configuration files
+Managing shared libraries
+Example (very common in servers): ln -s /var/log/nginx/access.log access.log
+-> Risk (if any)
+⚠️ Hard link: If original file is deleted, data still exists (can be confusing).
+⚠️ Soft link: If original file is deleted, link becomes broken.
+
+5. cut: Extracts specific columns or fields from a file.
+-> Real use case
+Extract usernames from /etc/passwd: cut -d: -f1 /etc/passwd
+-d: → delimiter
+-f1 → first field
+Extract first column from CSV:cut -d, -f1 file.csv
+
+6. tee: Displays output on screen and writes it to a file at the same time.
+-> Real use case:
+Save command output: ls -l | tee output.txt
+Append instead of overwrite: ls -l | tee -a output.txt
+Used in logging and automation scripts.
+-> Risk: Without -a, it overwrites the file.
+
+7. sort: Sorts lines of a file alphabetically or numerically.
+-> Real use case:
+Sort alphabetically: sort file.txt
+Numeric sort: sort -n numbers.txt
+Reverse order: sort -r file.txt
+-> Risk: No risk — unless you redirect output to overwrite original file.
+
+8. clear: Clears the terminal screen.
+-> Shortcut: Ctrl + L
+
+9. diff: Compares two files and shows differences.
+-> Real use case
+diff file1.txt file2.txt
+-> Used for:
+Comparing config files
+Checking code changes
+Debugging
