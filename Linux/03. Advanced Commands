@@ -39,3 +39,35 @@ Example (very common in servers): ln -s /var/log/nginx/access.log access.log
 -> Risk (if any)
 ⚠️ Hard link: If original file is deleted, data still exists (can be confusing).
 ⚠️ Soft link: If original file is deleted, link becomes broken.
+
+5. cut: Extracts specific columns or fields from a file.
+-> Real use case
+Extract usernames from /etc/passwd: cut -d: -f1 /etc/passwd
+-d: → delimiter
+-f1 → first field
+Extract first column from CSV:cut -d, -f1 file.csv
+
+6. tee: Displays output on screen and writes it to a file at the same time.
+-> Real use case:
+Save command output: ls -l | tee output.txt
+Append instead of overwrite: ls -l | tee -a output.txt
+Used in logging and automation scripts.
+-> Risk: Without -a, it overwrites the file.
+
+7. sort: Sorts lines of a file alphabetically or numerically.
+-> Real use case:
+Sort alphabetically: sort file.txt
+Numeric sort: sort -n numbers.txt
+Reverse order: sort -r file.txt
+-> Risk: No risk — unless you redirect output to overwrite original file.
+
+8. clear: Clears the terminal screen.
+-> Shortcut: Ctrl + L
+
+9. diff: Compares two files and shows differences.
+-> Real use case
+diff file1.txt file2.txt
+-> Used for:
+Comparing config files
+Checking code changes
+Debugging
