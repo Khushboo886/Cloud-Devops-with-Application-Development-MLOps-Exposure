@@ -1,0 +1,41 @@
+1. cp: Copies files or directories from one location to another.
+-> Real use case:
+Copy a file: cp file.txt backup.txt
+Copy file to another folder: cp file.txt /home/khushboo/
+Copy a folder (recursive): cp -r folder1 folder2
+-> Used for backups, deployments, duplicating configs.
+-> Risk (if any): ⚠️ If destination file exists, it may overwrite it.
+Safer option: cp -i file.txt backup.txt (-i asks before overwrite)
+
+2. mv: Moves or renames files and directories.
+-> Real use case
+Rename file: mv old.txt new.txt
+-> Move file to another folder: mv file.txt /home/khushboo/
+-> Used for organizing files or renaming configs.
+-> Risk (if any): ⚠️ If destination file exists, it will overwrite it without warning.
+Safer option: mv -i file.txt /home/khushboo/
+
+3. wc (word count): Counts lines, words, and characters in a file.
+-> Real use case:
+Count lines, words, characters: wc file.txt
+Count only lines: wc -l file.txt
+Count only words: wc -w file.txt
+Count characters: wc -c file.txt
+-> Used in Log analysis, Checking file size by line count, Script processing
+
+4. ln: Creates a link between files (a reference to another file).
+-> There are two types:
+Hard link
+Soft link (symbolic link)
+-> Real Use Case:
+Create Hard Link: ln file.txt file_link.txt
+Both files point to the same data.
+🔹 Create Soft Link (Most Common): ln -s file.txt shortcut.txt
+-> Used for:
+Creating shortcuts
+Linking configuration files
+Managing shared libraries
+Example (very common in servers): ln -s /var/log/nginx/access.log access.log
+-> Risk (if any)
+⚠️ Hard link: If original file is deleted, data still exists (can be confusing).
+⚠️ Soft link: If original file is deleted, link becomes broken.
